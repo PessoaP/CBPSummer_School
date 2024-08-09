@@ -1,0 +1,70 @@
+Info) VMD for MACOSXARM64, version 1.9.4a57 (April 27, 2022)
+Info) http://www.ks.uiuc.edu/Research/vmd/                         
+Info) Email questions and bug reports to vmd@ks.uiuc.edu           
+Info) Please include this reference in published work using VMD:   
+Info)    Humphrey, W., Dalke, A. and Schulten, K., `VMD - Visual   
+Info)    Molecular Dynamics', J. Molec. Graphics 1996, 14.1, 33-38.
+Info) -------------------------------------------------------------
+Info) Multithreading available, 10 CPUs, ISA dispatch enabled.
+Info) Dynamically loaded 1 plugins in directory:
+Info) /Applications/VMD 1.9.4a57-arm64-Rev12.app/Contents/vmd/plugins/MACOSXARM64/molfile
+2.0
+psfgen) reading topology file top_all27_prot_lipid.inp
+
+psfgen) > CHARMM22 All-Hydrogen Topology File for Proteins and Lipids <<
+psfgen) >>>>>> Includes phi, psi cross term map (CMAP) correction <<<<<<
+psfgen) >>>>>>>>>>>>>>>>>>>>>>   July 2004    <<<<<<<<<<<<<<<<<<<<<<<<<<
+psfgen)  All comments to ADM jr. via the CHARMM web site: www.charmm.org
+psfgen)                parameter set discussion forum
+psfgen) 
+psfgen) Created by CHARMM version 31 1
+psfgen) cross-term entries present in topology definitions
+psfgen) reading topology file toppar_all36_prot_heme.str
+
+psfgen)  Topology and Parameter Stream File for heme and related
+psfgen)  ligands and patches.
+psfgen) 
+psfgen) reading topology from stream file
+psfgen)  Topology for heme and related compounds and patches
+psfgen) 
+psfgen) Created by CHARMM version 31 1
+psfgen) duplicate type key CPA
+psfgen) duplicate type key CPB
+psfgen) duplicate type key CPM
+psfgen) duplicate type key CM
+psfgen) duplicate type key CST
+psfgen) duplicate type key NPH
+psfgen) duplicate type key OM
+psfgen) duplicate type key OST
+psfgen) duplicate type key FE
+psfgen) skipping parameters in stream file
+psfgen)  additional parameters for heme
+psfgen) 
+psfgen) reading topology file Fe4S4_mod_clusters.top
+
+psfgen) Created by CHARMM version 31 1
+psfgen) aliasing residue HIS to HSE
+psfgen) aliasing residue HEM to HEME
+psfgen) aliasing residue HOH to TIP3
+psfgen) aliasing residue ILE atom CD1 to CD
+psfgen) building segment U
+psfgen) reading residues from pdb file 3rgk.pdb
+psfgen) unknown residue type SO4
+psfgen) unknown residue type SO4
+psfgen) unknown residue type SO4
+psfgen) extracted 253 residues from pdb file
+Info: generating structure...
+psfgen) unknown residue type SO4
+psfgen) failed!ERROR: failed on end of segment
+MOLECULE DESTROYED BY FATAL ERROR!  Use resetpsf to start over.
+
+MOLECULE MISSING!  Use resetpsf to start over.
+
+MOLECULE MISSING!  Use resetpsf to start over.
+
+MOLECULE MISSING!  Use resetpsf to start over.
+
+MOLECULE MISSING!  Use resetpsf to start over.
+Info) VMD for MACOSXARM64, version 1.9.4a57 (April 27, 2022)
+Info) Exiting normally.
+vmd > 
