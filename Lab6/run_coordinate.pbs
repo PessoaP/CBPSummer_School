@@ -1,0 +1,41 @@
+#!/bin/bash 
+                                                                                           
+echo "##########################################################"
+echo "`date` - Starting script"
+echo "##########################################################"
+###########################################################################################
+
+# Define the current working directory
+dir1=$PWD
+
+echo " The current working directory: $dir1 "
+
+# Create directory for output from Tcl scripts
+mkdir ${dir1}/res_tclOUT
+
+# Create directories for the results of coordinate calculations
+mkdir ${dir1}/coordinateProtein
+
+# Print the current analysis step
+echo "ANALYZING DCD for coordinate calculation"
+
+    # Run the VMD script with the provided arguments and redirect output
+    # IMPORTANT: Specify the path to the VMD executable on your system.
+    # Ensure the path is correct for your installation to run the script successfully.
+    
+    "/Applications/VMD 1.9.4a57-arm64-Rev12.app/Contents/MacOS/VMDLauncher" -dispdev text -eofexit < coordinate.tcl &> coordinate.tcl.out
+
+    # Move the VMD script output to the results directory
+    mv coordinate.tcl.out  ${dir1}/res_tclOUT/
+
+    # Move the coordinate calculation output files to the respective directories
+    mv coordinate_COM_Protein.txt ${dir1}/coordinateProtein
+
+    # Print the completion message for the current step
+    echo "DONE ANALYZING DCD for coordinate calculation "
+
+echo "##########################################################"
+echo "`date` - Ending script"
+echo "##########################################################"
+
+exit
