@@ -1,0 +1,20 @@
+In this lab, students will be taught the basics of trajectory analysis in Python while reinforcing the lecture topic. The structure of the lab is:
+
+1.) Setup [30min-1hr]
+    + Install Conda/MDAnalysis
+    + Introduce the bare minimum necessary MDAnalysis
+2.) Calculate [45min-1.5hr]
+    + Have students write functions to calculate the radius of gyration (Rgyr) and end-to-end (E2E) distances at a single frame using MDA
+    + Generate an analysis class and process the whole trajectory
+    + Save the data to your working directory
+3.) Plot [30min-1hr]
+    + Timeseries
+    + Histograms
+
+If there are any issues during setup, I am setting up a Google Co-lab as a backup option. The conda install is typically pretty quick, but students should be allowed ample time to get this done. In the calculation section, students will not be shown the code for calculating the Rgyr, but must figure out how to write it themselves from MDAnalysis and the mathematical definition. Lab TAs should be there to help guide students through the process, but should not immediately reveal the solution.
+
+Once students have had their functions double-checked and approved, they can use these functions to generate an analysis class in a single line of code. The hard part being over, they will then need to save their data to the local directory. After saving the data, students are given a section of plotting codeblocks to immediately visualize the data.
+
+The notebook that students will see lives in the current directory, while the "answer key" notebook will exist in the ANSWER_KEY directory on Dropbox. This is also where all the data and figure images live. It should probably not be copied over to the github repo or USB drives.
+
+-TC
