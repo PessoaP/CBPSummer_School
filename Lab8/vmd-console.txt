@@ -1,0 +1,41 @@
+
+mol new ./molPdbPsf/1ubq.psf type psf
+
+mol addfile 2500Frames/1ubqNVT.dcd type dcd
+
+set protein [atomselect top "all and not water"]
+
+set nf 2500
+
+animate goto 1
+
+set dipoleProt [measure dipole $protein -debye -masscenter]
+
+
+#########################################################################
+
+
+mol new ./molPdbPsf/1ubq.psf type psf
+
+mol addfile 2500Frames/1ubqNVT.dcd type dcd
+
+set outfile [open  dipole_Protein.txt w] 
+
+set protein [atomselect top "all and not water"]
+
+set nf 2500
+
+for {set frame 0} {$frame < $nf} {incr frame} {                                 
+    animate goto $frame  
+
+
+set dipoleProt [measure dipole $protein -debye -masscenter]
+                                                                                
+
+puts $outfile  [format  " %.5f    %.5f    %.5f " [lindex $dipoleProt 0]  [lindex $dipoleProt 1]  [lindex $dipoleProt 2]]                                    
+} 
+
+
+
+#########################################################################
+

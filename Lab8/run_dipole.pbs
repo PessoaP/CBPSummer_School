@@ -1,0 +1,41 @@
+#!/bin/bash 
+                                                                                           
+echo "##########################################################"
+echo "`date` - Starting script"
+echo "##########################################################"
+###########################################################################################
+
+# Define the current working directory
+dir1=$PWD
+
+echo " The current working directory: $dir1 "
+
+# Create directory for output from Tcl scripts
+mkdir ${dir1}/res_tclOUT
+
+# Create directories for the results of dipole moment calculations
+mkdir ${dir1}/dipoleProtein
+
+# Print the current analysis step
+echo "ANALYZING DCD for dipole moment calculation"
+
+    # Run the VMD script with the provided arguments and redirect output
+    # IMPORTANT: Specify the path to the VMD executable on your system.
+    # Ensure the path is correct for your installation to run the script successfully.
+ #    "/Applications/VMD 1.9.4a57-x86_64-Rev12.app/Contents/Resources/VMD.app/Contents/MacOS/VMD" -dispdev text -eofexit < dipole.tcl &> dipole.tcl.out
+     "/Applications/VMD\ 1.9.4a57-arm64-Rev12.app/Contents/MacOS/VMDLauncher" -dispdev text -eofexit < dipole.tcl &> dipole.tcl.out
+
+    # Move the VMD script output to the results directory
+    mv dipole.tcl.out  ${dir1}/res_tclOUT/
+
+    # Move the dipole moment calculation output files to the respective directories
+    mv dipole_Protein.txt ${dir1}/dipoleProtein
+
+    # Print the completion message for the current step
+    echo "DONE ANALYZING DCD for dipole moment calculation "
+
+echo "##########################################################"
+echo "`date` - Ending script"
+echo "##########################################################"
+
+exit
